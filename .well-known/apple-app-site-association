@@ -3,7 +3,9 @@
     "apps": [],
     "details": [
       {
-        "appIDs": ["N8EE67V363.com.aziolabs.lumina"],
+        "appIDs": [
+          "N8EE67V363.com.aziolabs.lumina"
+        ],
         "components": [
           {
             "/": "/plaid/redirect/*",
