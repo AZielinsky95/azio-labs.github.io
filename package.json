@@ -1,10 +1,13 @@
 {
   "name": "aziolabs-site",
   "version": "1.0.0",
-  "description": "",
+  "description": "Alejandro Zielinsky \u2014 iOS, AI, and independent products",
   "main": "index.html",
   "scripts": {
-    "sass:build": "sass --watch scss/styles.scss css/styles.css"
+    "sass:build": "sass --watch scss/styles.scss css/styles.css",
+    "build": "node scripts/build.mjs",
+    "preview": "python3 -m http.server 8765 --bind 127.0.0.1",
+    "verify": "node scripts/verify.mjs"
   },
   "author": "AZielinsky95",
   "license": "ISC",
