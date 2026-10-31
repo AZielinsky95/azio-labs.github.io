@@ -383,3 +383,9 @@ html.name-motion .home-name-intro:not(.name-playing):not(.name-complete) .name-m
 .page-overview .page-shell{min-height:calc(100dvh - 110px)}
 @media(max-width:760px){.page-overview>.home-masthead{padding-inline:25px}.page-overview .page-shell{min-height:0}}
 @media(max-width:480px){.page-overview>.home-masthead{padding-inline:20px}}
+
+/* SF-style navigation symbols and an orange selected-route capsule. */
+.nav-sf-icon{display:block;width:23px;height:23px;flex:0 0 23px;padding:2px}
+.sidebar .nav-link.selected,.page-overview .sidebar .nav-link.selected{background:var(--coral);color:#241412;border-radius:999px;font-weight:600}
+.sidebar .nav-link.selected:hover,.page-overview .sidebar .nav-link.selected:hover{background:#ff9b8b;color:#241412}
+.sidebar .nav-link.selected::after{content:none}
