@@ -14,7 +14,7 @@ The site remains compatible with the repository’s static GitHub Pages deployme
 
 ## Media
 
-Assets are self-contained in `public/portfolio/`. Videos use native controls and `preload="none"`, with no autoplay. Bento is a web-optimized H.264/AAC export of the user-confirmed `Downloads/Ad Ready Bento.mov`. Sticker Llama uses `designmocks/launch-trailer-v2/sticker-llama-launch-v2.mp4` (Oct 29, 2026). Poster frames are extracted from those videos.
+Assets are self-contained in `public/portfolio/`. Videos use native controls and `preload="none"`, with no autoplay. Bento uses the user-selected `Projects/Unity/BentoMarketing/BentoMarketing/OctoberAds/Polished Demo Music v6.1.mp4`, with fast-start metadata for web playback. Poly Vita uses a web-optimized H.264/AAC export of `Documents/Stuff/PolyVitaTrailerShort.mp4`. Sticker Llama uses `designmocks/launch-trailer-v2/sticker-llama-launch-v2.mp4` (Oct 29, 2026). Poster frames are extracted from those videos.
 
 The coral logo preserves the original SVG geometry and replaces the teal accent with `#FA806F`. The original logo file is unchanged.
 
@@ -34,11 +34,11 @@ Professional contributions are based on Alejandro’s supplied resume and portfo
 - Letterbox: https://letterboxgames.com/ and https://apps.apple.com/ca/app/letterbox-daily-word-games/id6452469243
 - Poly Vita: https://store.steampowered.com/app/1831410/Poly_Vita/
 
-The GainIQ contract is shown as “Nov 2025–present” because the supplied November 2026 end date is in the future at this revision (October 30, 2026). Update when the engagement ends. Sticker Llama is marked “Coming soon” in line with its public website.
+The GainIQ contract is shown as “Nov 2025–Nov 2026” as supplied by Alejandro. Sticker Llama is marked “Coming soon” in line with its public website.
 
 ## Asset provenance
 
-- Portrait: `Projects/portfolio-site/images/az.jpeg`.
+- Portrait: a pencil sketch derived from Alejandro’s supplied smiling portrait, with a shared circle mask on Overview and About Me.
 - Bento imagery: `Projects/bento-app.github.io/public/images/` and app icon from that site.
 - Sticker Llama icon/collage: `Projects/StickerLLamaSite/public/assets/`.
 - Letterbox imagery: `Projects/iOS/LetterBox/screenshots/final/`.

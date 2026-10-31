@@ -307,7 +307,8 @@
 .page-overview .home-profile-frame .profile-card{display:flex;flex-direction:column;align-items:center;text-align:center;background:none;border-radius:0;padding:0;color:var(--ink)}
 .home-portrait{position:relative;isolation:isolate;width:clamp(180px,15vw,250px);margin:0 auto 23px;aspect-ratio:3/4}
 .home-portrait-circle{position:absolute;z-index:-1;width:100%;aspect-ratio:1;border-radius:50%;background:#c57465;left:0;top:auto;bottom:0}
-.home-portrait-image{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;mask-image:linear-gradient(#000,#000),radial-gradient(ellipse closest-side,#000 99.4%,transparent 100%);mask-size:100% 38%,100% 75%;mask-position:center top,center bottom;mask-repeat:no-repeat}
+.portrait-cutout-mask{position:absolute;inset:0;mask-image:linear-gradient(#000,#000),radial-gradient(ellipse closest-side,#000 99.4%,transparent 100%);mask-size:100% 38%,100% 75%;mask-position:center top,center bottom;mask-repeat:no-repeat}
+.home-portrait-image{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;transform:translateY(7%)}
 .page-overview .home-profile-frame h1{font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-weight:400;font-size:clamp(45px,4.1vw,74px);line-height:1.02;text-transform:uppercase;letter-spacing:-.018em;color:var(--ink);margin:0}
 .home-profile-frame h1 .home-name-period{color:var(--coral)}
 .page-overview .home-profile-frame .home-role{font-size:clamp(10px,.85vw,13px);line-height:1.75;letter-spacing:.1px;color:var(--coral);margin-top:17px;max-width:100%}
@@ -386,6 +387,59 @@ html.name-motion .home-name-intro:not(.name-playing):not(.name-complete) .name-m
 
 /* SF-style navigation symbols and an orange selected-route capsule. */
 .nav-sf-icon{display:block;width:23px;height:23px;flex:0 0 23px;padding:2px}
-.sidebar .nav-link.selected,.page-overview .sidebar .nav-link.selected{background:var(--coral);color:#241412;border-radius:999px;font-weight:600}
-.sidebar .nav-link.selected:hover,.page-overview .sidebar .nav-link.selected:hover{background:#ff9b8b;color:#241412}
+.sidebar .nav-link.selected,.page-overview .sidebar .nav-link.selected{background:rgba(250,128,111,.12);color:var(--coral);box-shadow:inset 0 0 0 1px var(--coral);border-radius:999px;font-weight:600}
+.sidebar .nav-link.selected:hover,.page-overview .sidebar .nav-link.selected:hover{background:rgba(250,128,111,.18);color:var(--coral)}
 .sidebar .nav-link.selected::after{content:none}
+
+/* Match the footer edges to the page-wide masthead. */
+.page-overview>.site-footer{width:100%;max-width:none;min-height:64px;margin:0;padding:12px clamp(24px,3.6vw,78px) 28px;align-items:center}
+@media(min-width:761px){.page-overview .page-shell{min-height:calc(100dvh - 174px)}}
+@media(max-width:760px){.page-overview>.site-footer{padding-inline:25px}}
+@media(max-width:480px){.page-overview>.site-footer{padding-inline:20px}}
+
+/* The route capsule folds horizontally on tap. */
+.sidebar nav{position:relative;isolation:isolate}
+.nav-selection{display:block;position:absolute;left:0;top:0;z-index:0;pointer-events:none;border:1px solid var(--coral);border-radius:999px;background:rgba(250,128,111,.12);transform-origin:50% 50%}
+.nav-selection[hidden]{display:none}
+.sidebar nav .nav-link,.sidebar nav .nav-label{position:relative;z-index:1}
+.sidebar nav .nav-link{transition:color 180ms ease}
+.sidebar nav.has-selection .nav-link.selected,.page-overview .sidebar nav.has-selection .nav-link.selected{background:transparent;box-shadow:none;color:var(--coral)}
+.sidebar .route-pressed .nav-sf-icon,.sidebar .route-pressed .nav-icon{animation:nav-icon-tap 240ms ease-out}
+@keyframes nav-icon-tap{0%{transform:scale(.88)}60%{transform:scale(1.1)}100%{transform:scale(1)}}
+/* A small blur, limited to the card, softens the existing Voronoi field. */
+.home-profile-frame{background:rgba(25,23,23,.35);-webkit-backdrop-filter:blur(2px) brightness(1.5);backdrop-filter:blur(2px) brightness(1.5);border-color:#ffffff28;box-shadow:inset 0 1px 0 #ffffff0a,0 25px 60px #0003}
+
+/* One coral slash separates AZ and the binary-inspired IO mark. */
+.home-wordmarks{gap:14px}
+.home-binary{border-left:0;padding-left:0}
+.home-mark-separator{font:32px/1 Georgia,serif;color:var(--coral);letter-spacing:0}
+@media(max-width:760px){.home-wordmarks{gap:12px}.home-mark-separator{font-size:28px}}
+@media(max-width:480px){.home-wordmarks{gap:10px}.home-mark-separator{font-size:26px}}
+
+/* Equal character slots keep the serif and binary glyphs evenly spaced. */
+.home-wordmarks{display:grid;grid-template-columns:repeat(5,20px);gap:7px;align-items:center;justify-content:center}
+.home-wordmarks>span{justify-self:center;letter-spacing:0}
+.home-mark-letter{font:24px/1 Georgia,serif;text-transform:none}
+.home-mark-bit{font:23px/1 ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:none}
+.home-mark-zero{display:block;width:14px;height:19px;border:1.5px solid currentColor;border-radius:50%}
+@media(max-width:760px){.home-wordmarks{grid-template-columns:repeat(5,18px);gap:6px}.home-mark-letter{font-size:22px}.home-mark-bit{font-size:21px}.home-mark-zero{width:12px;height:17px}}
+@media(max-width:480px){.home-wordmarks{grid-template-columns:repeat(5,16px);gap:5px}.home-mark-letter{font-size:20px}.home-mark-bit{font-size:19px}.home-mark-zero{width:11px;height:16px}}
+
+/* Share the portrait treatment across Overview and About Me. */
+.about-portrait{max-width:290px;justify-self:center}
+.about-portrait .home-portrait{width:100%;margin:0}
+.about-portrait .home-portrait-image{width:100%;height:100%;aspect-ratio:auto;object-fit:contain;object-position:center;border-radius:0;filter:none}
+.home-product-links{padding-top:22px}
+@media(max-width:480px){.home-product-links{padding-top:18px}}
+
+/* Keep the professional work focused on the product and its story. */
+.page-experience .page-header{max-width:1100px}
+.page-experience .page-header h1{font-size:clamp(38px,5.2vw,74px);line-height:1.13;text-wrap:balance}
+.page-experience .project-story{margin-top:16px}
+.page-experience .project-story p{font-size:14px;line-height:1.85}
+.page-experience .project-story p+p{margin-top:14px}
+.page-experience .flagship .product-description{font-size:14px;line-height:1.85}
+.page-experience .teleport-panel .client-top h2{font-size:30px;letter-spacing:-.035em}
+.page-experience .teleport-panel .text-link{margin-top:20px}
+.page-experience .client-card>p{margin-bottom:22px}
+@media(max-width:600px){.page-experience .page-header h1{font-size:clamp(32px,8.5vw,49px)}.page-experience .project-story p{font-size:13px}}
