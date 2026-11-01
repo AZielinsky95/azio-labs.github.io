@@ -14,6 +14,16 @@ for (const route of routes) {
   if ((html.match(/<h1\b/g)||[]).length !== 1) throw new Error(`${route}: expected one main heading`);
   if (html.includes('class="profile-card"') !== (route === '')) throw new Error(`${route}: misplaced contact card`);
   if ((html.match(/aria-current="page"/g)||[]).length !== 1) throw new Error(`${route}: incorrect active navigation`);
+  const meta = Object.fromEntries([...html.matchAll(/<meta (?:property|name)="([^"]+)" content="([^"]*)">/g)].map(([, key, value]) => [key, value]));
+  for (const key of ['og:title','og:type','og:url','og:image','og:image:alt','og:image:width','og:image:height','twitter:image:alt']) {
+    if (!meta[key]) throw new Error(`${route}: missing sharing metadata ${key}`);
+  }
+  const shareImage = new URL(meta['og:image']);
+  if (shareImage.origin !== 'https://aziolabs.com' || meta['twitter:image'] !== shareImage.href || meta['twitter:card'] !== 'summary_large_image') throw new Error(`${route}: inconsistent sharing image`);
+  await checkLocalReference(shareImage.pathname);
+  const png = await readFile(path.join(root, shareImage.pathname));
+  if (png.subarray(0, 8).toString('hex') !== '89504e470d0a1a0a') throw new Error(`${route}: sharing image must be PNG`);
+  if (png.readUInt32BE(16) !== Number(meta['og:image:width']) || png.readUInt32BE(20) !== Number(meta['og:image:height'])) throw new Error(`${route}: sharing image dimensions mismatch`);
   for (const [, url] of html.matchAll(/(?:href|src|poster)="(\/[^"#]*)"/g)) {
     await checkLocalReference(url);
   }

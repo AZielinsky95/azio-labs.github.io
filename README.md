@@ -24,6 +24,10 @@ Page images use responsive WebP variants from `scripts/image-assets.json`; origi
 
 Fonts are served locally from `public/fonts/`, including their SIL Open Font Licenses. The animated Voronoi field uses a smaller grid and a 12 fps limit on narrow or touch viewports, while retaining the desktop settings. The keyboard skip link is clipped until focused instead of being translated above Safari’s visible viewport.
 
+## Link previews
+
+All portfolio routes use the static AZ / IO wordmark over the actual Voronoi field in `public/portfolio/azio-voronoi-share-v1.png` (1200×630), with Open Graph and large-image card metadata. The image has its own URL rather than reusing the old avatar URL. To regenerate the artwork on macOS with Node.js and Pillow installed, run `python3 scripts/generate-share-preview.py`; the normal site build uses the committed PNG.
+
 ## Content sources
 
 Professional contributions are based on Alejandro’s supplied resume and portfolio PDFs. Product descriptions are independently sourced from official listings and websites. Historical responsibilities are kept separate from current capabilities.
