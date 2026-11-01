@@ -177,59 +177,116 @@
       }
     ]
   },
-  "letterbox-board.jpg": {
+  "letterbox-app-store-01.png": {
     "width": 1290,
     "height": 2796,
     "kind": "image",
     "variants": [
       {
-        "file": "optimized/letterbox-board-480-ba48be4b.webp",
+        "file": "optimized/letterbox-app-store-01-480-796b87a6.webp",
         "width": 480
       },
       {
-        "file": "optimized/letterbox-board-960-bc0dc0ef.webp",
+        "file": "optimized/letterbox-app-store-01-960-a6f67537.webp",
         "width": 960
       },
       {
-        "file": "optimized/letterbox-board-1290-cdee5cc8.webp",
+        "file": "optimized/letterbox-app-store-01-1290-f3556450.webp",
         "width": 1290
       }
     ]
   },
-  "letterbox-hidden.jpg": {
+  "letterbox-app-store-02.png": {
     "width": 1290,
     "height": 2796,
     "kind": "image",
     "variants": [
       {
-        "file": "optimized/letterbox-hidden-480-3159044e.webp",
+        "file": "optimized/letterbox-app-store-02-480-b5fb9c66.webp",
         "width": 480
       },
       {
-        "file": "optimized/letterbox-hidden-960-8c1fc429.webp",
+        "file": "optimized/letterbox-app-store-02-960-894f831f.webp",
         "width": 960
       },
       {
-        "file": "optimized/letterbox-hidden-1290-c467752a.webp",
+        "file": "optimized/letterbox-app-store-02-1290-35a51ea1.webp",
         "width": 1290
       }
     ]
   },
-  "letterbox-home.jpg": {
+  "letterbox-app-store-03.png": {
     "width": 1290,
     "height": 2796,
     "kind": "image",
     "variants": [
       {
-        "file": "optimized/letterbox-home-480-574b2d81.webp",
+        "file": "optimized/letterbox-app-store-03-480-2b8e5628.webp",
         "width": 480
       },
       {
-        "file": "optimized/letterbox-home-960-ef89cc07.webp",
+        "file": "optimized/letterbox-app-store-03-960-771a798e.webp",
         "width": 960
       },
       {
-        "file": "optimized/letterbox-home-1290-83069b1e.webp",
+        "file": "optimized/letterbox-app-store-03-1290-f0e4cde2.webp",
+        "width": 1290
+      }
+    ]
+  },
+  "letterbox-app-store-04.png": {
+    "width": 1290,
+    "height": 2796,
+    "kind": "image",
+    "variants": [
+      {
+        "file": "optimized/letterbox-app-store-04-480-e180a743.webp",
+        "width": 480
+      },
+      {
+        "file": "optimized/letterbox-app-store-04-960-b3f60a8d.webp",
+        "width": 960
+      },
+      {
+        "file": "optimized/letterbox-app-store-04-1290-ad37ded9.webp",
+        "width": 1290
+      }
+    ]
+  },
+  "letterbox-app-store-05.png": {
+    "width": 1290,
+    "height": 2796,
+    "kind": "image",
+    "variants": [
+      {
+        "file": "optimized/letterbox-app-store-05-480-f7961bb0.webp",
+        "width": 480
+      },
+      {
+        "file": "optimized/letterbox-app-store-05-960-3cbd69c9.webp",
+        "width": 960
+      },
+      {
+        "file": "optimized/letterbox-app-store-05-1290-fea9fd60.webp",
+        "width": 1290
+      }
+    ]
+  },
+  "letterbox-app-store-06.png": {
+    "width": 1290,
+    "height": 2796,
+    "kind": "image",
+    "variants": [
+      {
+        "file": "optimized/letterbox-app-store-06-480-4f268c23.webp",
+        "width": 480
+      },
+      {
+        "file": "optimized/letterbox-app-store-06-960-904cedbd.webp",
+        "width": 960
+      },
+      {
+        "file": "optimized/letterbox-app-store-06-1290-43a65d59.webp",
         "width": 1290
       }
     ]

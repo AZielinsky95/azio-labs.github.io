@@ -449,3 +449,9 @@ html.name-motion .home-name-intro:not(.name-playing):not(.name-complete) .name-m
 .page-experience .teleport-panel .text-link{margin-top:20px}
 .page-experience .client-card>p{margin-bottom:22px}
 @media(max-width:600px){.page-experience .page-header h1{font-size:clamp(32px,8.5vw,49px)}.page-experience .project-story p{font-size:13px}}
+
+/* Keep App Store screenshots readable in a native horizontal gallery. */
+.letterbox-gallery{min-width:0;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:calc((100% - 44px)/3);overflow-x:auto;scroll-snap-type:x proximity;scroll-padding-inline:35px;overscroll-behavior-inline:contain}
+.letterbox-gallery img{scroll-snap-align:start}
+.letterbox-gallery:focus-visible{outline:2px solid var(--coral);outline-offset:6px}
+@media(max-width:600px){.letterbox-gallery{grid-auto-columns:82%;scroll-padding-inline:12px}.letterbox-gallery img:nth-child(2){margin-top:0}}

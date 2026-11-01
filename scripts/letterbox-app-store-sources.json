@@ -1,0 +1,49 @@
+{
+  "app": "Letterbox - Daily Word Games",
+  "store": "https://apps.apple.com/ca/app/letterbox-daily-word-games/id6452469243?uo=4",
+  "screenshots": [
+    {
+      "file": "letterbox-app-store-01.png",
+      "width": 1290,
+      "height": 2796,
+      "bytes": 1437136,
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/25/fe/4f/25fe4f36-329a-ce1e-0541-cd83e1353467/img1.png/1290x2796bb.png"
+    },
+    {
+      "file": "letterbox-app-store-02.png",
+      "width": 1290,
+      "height": 2796,
+      "bytes": 1543308,
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0d/96/16/0d961673-384e-f054-0afd-6ff11575ddad/img2.png/1290x2796bb.png"
+    },
+    {
+      "file": "letterbox-app-store-03.png",
+      "width": 1290,
+      "height": 2796,
+      "bytes": 738091,
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/90/ff/4b/90ff4b8a-320e-c49c-146e-ac61ddb410eb/img3.png/1290x2796bb.png"
+    },
+    {
+      "file": "letterbox-app-store-04.png",
+      "width": 1290,
+      "height": 2796,
+      "bytes": 1550341,
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/39/e9/6d/39e96dae-8c77-0b15-f9db-eabcabb84a7f/img4.png/1290x2796bb.png"
+    },
+    {
+      "file": "letterbox-app-store-05.png",
+      "width": 1290,
+      "height": 2796,
+      "bytes": 1868323,
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/17/fb/00/17fb0061-6a90-8cb0-f3be-1177e8c1cd0b/omg5.png/1290x2796bb.png"
+    },
+    {
+      "file": "letterbox-app-store-06.png",
+      "width": 1290,
+      "height": 2796,
+      "bytes": 1673813,
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/fc/f0/e1/fcf0e16e-bd69-806e-f352-c2f2fea8614b/img6.png/1290x2796bb.png"
+    }
+  ],
+  "retrieved": "2026-11-01"
+}

@@ -47,7 +47,7 @@ The GainIQ contract is shown as “Nov 2025–Nov 2026” as supplied by Alejand
 - Portrait: a pencil sketch derived from Alejandro’s supplied smiling portrait, with a shared circle mask on Overview and About Me.
 - Bento imagery: `Projects/bento-app.github.io/public/images/` and app icon from that site.
 - Sticker Llama icon/collage: `Projects/StickerLLamaSite/public/assets/`.
-- Letterbox imagery: `Projects/iOS/LetterBox/screenshots/final/`.
+- Letterbox imagery: all six iPhone screenshots from the official App Store listing, retrieved November 1, 2026. Source URLs are recorded in `scripts/letterbox-app-store-sources.json`.
 - Poly Vita promotional art: `Projects/react-portfolio/public/images/library_capsule.png`; gameplay images from supplied portfolio PDF page 8.
 - Professional product imagery/icons: extracted from supplied portfolio PDF pages 4–6.
 
