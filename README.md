@@ -18,6 +18,12 @@ Assets are self-contained in `public/portfolio/`. Videos use native controls and
 
 The coral logo preserves the original SVG geometry and replaces the teal accent with `#FA806F`. The original logo file is unchanged.
 
+## Mobile delivery
+
+Page images use responsive WebP variants from `scripts/image-assets.json`; original source assets are retained. To regenerate after changing an image, run `python3 scripts/optimize-images.py` with Pillow installed, then run the normal build. The production build itself needs no image library.
+
+Fonts are served locally from `public/fonts/`, including their SIL Open Font Licenses. The animated Voronoi field uses a smaller grid and a 12 fps limit on narrow or touch viewports, while retaining the desktop settings. The keyboard skip link is clipped until focused instead of being translated above Safari’s visible viewport.
+
 ## Content sources
 
 Professional contributions are based on Alejandro’s supplied resume and portfolio PDFs. Product descriptions are independently sourced from official listings and websites. Historical responsibilities are kept separate from current capabilities.

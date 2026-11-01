@@ -5,24 +5,37 @@
   if (!ctx) return;
 
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const compact = matchMedia('(max-width: 760px), (pointer: coarse)');
   const edgePairs = [[], [3, 0], [0, 1], [3, 1], [1, 2], null, [0, 2], [3, 2], [2, 3], [0, 2], null, [1, 2], [1, 3], [0, 1], [3, 0], []];
   const seeds = Array.from({ length: 20 }, (_, i) => ({
     x: (i % 5) / 4,
     y: Math.floor(i / 5) / 3,
     phase: i * 2.39996,
   }));
+  const points = new Float32Array(seeds.length * 2);
   let width, height, cols, rows, dx, dy, dpr, field;
   let time = 5, last = 0, frame = 0;
+
+  // Trace an edge without allocating a new point array for every segment.
+  function trace(edge, px, py, level, a, b, c, d, move) {
+    let x, y;
+    if (edge === 0) { x = px + dx * (level - a) / (b - a); y = py; }
+    else if (edge === 1) { x = px + dx; y = py + dy * (level - b) / (c - b); }
+    else if (edge === 2) { x = px + dx * (level - d) / (c - d); y = py + dy; }
+    else { x = px; y = py + dy * (level - a) / (d - a); }
+    if (move) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
+  }
 
   function draw() {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.fillStyle = '#141313';
     ctx.fillRect(0, 0, width, height);
     const scale = Math.max(620, width);
-    const points = seeds.map(seed => [
-      seed.x * scale + Math.sin(time * .065 + seed.phase) * 85,
-      seed.y * Math.max(height, 650) + Math.cos(time * .055 + seed.phase * 1.7) * 85,
-    ]);
+    seeds.forEach((seed, i) => {
+      points[i * 2] = seed.x * scale + Math.sin(time * .065 + seed.phase) * 85;
+      points[i * 2 + 1] = seed.y * Math.max(height, 650) + Math.cos(time * .055 + seed.phase * 1.7) * 85;
+    });
 
     // Euclidean Voronoi distance field: F1 and F2 are distances to the two
     // nearest moving sites. Their equality defines the actual cell boundaries.
@@ -32,8 +45,8 @@
       for (let x = 0; x <= cols; x++) {
         let first = Infinity, second = Infinity;
         const px = x * dx, py = y * dy;
-        for (const p of points) {
-          const distanceSquared = (px - p[0]) ** 2 + (py - p[1]) ** 2;
+        for (let i = 0; i < points.length; i += 2) {
+          const distanceSquared = (px - points[i]) ** 2 + (py - points[i + 1]) ** 2;
           if (distanceSquared < first) { second = first; first = distanceSquared; }
           else if (distanceSquared < second) second = distanceSquared;
         }
@@ -58,15 +71,9 @@
             const center = (a + b + c + d) / 4;
             edges = (mask === 5) === (center >= level) ? [0, 1, 2, 3] : [3, 0, 1, 2];
           }
-          const point = edge => {
-            if (edge === 0) return [px + dx * (level - a) / (b - a), py];
-            if (edge === 1) return [px + dx, py + dy * (level - b) / (c - b)];
-            if (edge === 2) return [px + dx * (level - d) / (c - d), py + dy];
-            return [px, py + dy * (level - a) / (d - a)];
-          };
           for (let k = 0; k < edges.length; k += 2) {
-            const p = point(edges[k]), q = point(edges[k + 1]);
-            ctx.moveTo(...p); ctx.lineTo(...q);
+            trace(edges[k], px, py, level, a, b, c, d, true);
+            trace(edges[k + 1], px, py, level, a, b, c, d, false);
           }
         }
       }
@@ -82,7 +89,7 @@
   function tick(now) {
     frame = 0;
     if (!active()) return;
-    if (now - last >= 1000 / 24) {
+    if (now - last >= 1000 / (compact.matches ? 12 : 24)) {
       time += Math.min((now - last) / 1000, .1);
       last = now;
       draw();
@@ -95,23 +102,25 @@
     last = performance.now();
     if (active()) frame = requestAnimationFrame(tick);
   }
-  function resize() {
+  function resize(force = false) {
     const rect = canvas.getBoundingClientRect();
-    width = rect.width; height = rect.height;
-    if (!width || !height) return;
+    const nextWidth = Math.round(rect.width), nextHeight = Math.round(rect.height);
+    if (!nextWidth || !nextHeight || (!force && nextWidth === width && nextHeight === height)) return;
+    width = nextWidth; height = nextHeight;
     // Cap grid work and output resolution independently of display pixel density.
-    const step = Math.max(7, Math.sqrt(width * height / 18000));
+    const step = Math.max(compact.matches ? 10 : 7, Math.sqrt(width * height / (compact.matches ? 6000 : 18000)));
     cols = Math.ceil(width / step); rows = Math.ceil(height / step);
     dx = width / cols; dy = height / rows;
-    dpr = Math.min(devicePixelRatio || 1, 1.25);
+    dpr = Math.min(devicePixelRatio || 1, compact.matches ? 1 : 1.25);
     canvas.width = Math.round(width * dpr); canvas.height = Math.round(height * dpr);
     field = new Float32Array((cols + 1) * (rows + 1));
     draw(); sync();
   }
   reducedMotion.addEventListener('change', sync);
+  compact.addEventListener('change', () => resize(true));
   document.addEventListener('visibilitychange', sync);
   window.addEventListener('pagehide', () => cancelAnimationFrame(frame));
   window.addEventListener('pageshow', sync);
-  new ResizeObserver(resize).observe(canvas);
+  new ResizeObserver(() => resize()).observe(canvas);
   resize();
 })();

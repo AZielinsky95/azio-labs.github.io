@@ -1,0 +1,533 @@
+{
+  "bento-ai.png": {
+    "width": 2056,
+    "height": 1900,
+    "kind": "image",
+    "variants": [
+      {
+        "file": "optimized/bento-ai-480-0faabb17.webp",
+        "width": 480
+      },
+      {
+        "file": "optimized/bento-ai-960-4f01ee1c.webp",
+        "width": 960
+      },
+      {
+        "file": "optimized/bento-ai-1440-2c23f3b6.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "bento-dashboards.png": {
+    "width": 2000,
+    "height": 1838,
+    "kind": "image",
+    "variants": [
+      {
+        "file": "optimized/bento-dashboards-480-219180cd.webp",
+        "width": 480
+      },
+      {
+        "file": "optimized/bento-dashboards-960-1169644e.webp",
+        "width": 960
+      },
+      {
+        "file": "optimized/bento-dashboards-1440-cf18de40.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "bento-icon.png": {
+    "width": 180,
+    "height": 180,
+    "kind": "icon",
+    "variants": [
+      {
+        "file": "optimized/bento-icon-64-652583f2.webp",
+        "width": 64
+      },
+      {
+        "file": "optimized/bento-icon-128-1f602060.webp",
+        "width": 128
+      },
+      {
+        "file": "optimized/bento-icon-180-d1621393.webp",
+        "width": 180
+      }
+    ]
+  },
+  "bento-tracking.png": {
+    "width": 873,
+    "height": 724,
+    "kind": "image",
+    "variants": [
+      {
+        "file": "optimized/bento-tracking-480-b05a723e.webp",
+        "width": 480
+      },
+      {
+        "file": "optimized/bento-tracking-873-e6cbdfa6.webp",
+        "width": 873
+      }
+    ]
+  },
+  "glo-discover.jpg": {
+    "width": 800,
+    "height": 1734,
+    "kind": "image",
+    "variants": [
+      {
+        "file": "optimized/glo-discover-480-9e05baa6.webp",
+        "width": 480
+      },
+      {
+        "file": "optimized/glo-discover-800-dc3cb9c6.webp",
+        "width": 800
+      }
+    ]
+  },
+  "glo-icon.jpg": {
+    "width": 512,
+    "height": 512,
+    "kind": "icon",
+    "variants": [
+      {
+        "file": "optimized/glo-icon-64-8b0e07b7.webp",
+        "width": 64
+      },
+      {
+        "file": "optimized/glo-icon-128-12e4b9f2.webp",
+        "width": 128
+      },
+      {
+        "file": "optimized/glo-icon-192-46cb19b9.webp",
+        "width": 192
+      }
+    ]
+  },
+  "glo-map.jpg": {
+    "width": 800,
+    "height": 1734,
+    "kind": "image",
+    "variants": [
+      {
+        "file": "optimized/glo-map-480-203e1708.webp",
+        "width": 480
+      },
+      {
+        "file": "optimized/glo-map-800-2ace431f.webp",
+        "width": 800
+      }
+    ]
+  },
+  "guidealong-icon.jpg": {
+    "width": 512,
+    "height": 512,
+    "kind": "icon",
+    "variants": [
+      {
+        "file": "optimized/guidealong-icon-64-8027eb9b.webp",
+        "width": 64
+      },
+      {
+        "file": "optimized/guidealong-icon-128-12910a8c.webp",
+        "width": 128
+      },
+      {
+        "file": "optimized/guidealong-icon-192-9ec5e226.webp",
+        "width": 192
+      }
+    ]
+  },
+  "home-bento-screen.png": {
+    "width": 780,
+    "height": 1696,
+    "kind": "phone",
+    "variants": [
+      {
+        "file": "optimized/home-bento-screen-384-3ebce5e7.webp",
+        "width": 384
+      },
+      {
+        "file": "optimized/home-bento-screen-640-0374332f.webp",
+        "width": 640
+      },
+      {
+        "file": "optimized/home-bento-screen-780-7ad13cae.webp",
+        "width": 780
+      }
+    ]
+  },
+  "home-llama-screen.png": {
+    "width": 1320,
+    "height": 2868,
+    "kind": "phone",
+    "variants": [
+      {
+        "file": "optimized/home-llama-screen-384-0709fcfc.webp",
+        "width": 384
+      },
+      {
+        "file": "optimized/home-llama-screen-640-8669d668.webp",
+        "width": 640
+      },
+      {
+        "file": "optimized/home-llama-screen-960-08250ddc.webp",
+        "width": 960
+      }
+    ]
+  },
+  "letterbox-board.jpg": {
+    "width": 1290,
+    "height": 2796,
+    "kind": "image",
+    "variants": [
+      {
+        "file": "optimized/letterbox-board-480-ba48be4b.webp",
+        "width": 480
+      },
+      {
+        "file": "optimized/letterbox-board-960-bc0dc0ef.webp",
+        "width": 960
+      },
+      {
+        "file": "optimized/letterbox-board-1290-cdee5cc8.webp",
+        "width": 1290
+      }
+    ]
+  },
+  "letterbox-hidden.jpg": {
+    "width": 1290,
+    "height": 2796,
+    "kind": "image",
+    "variants": [
+      {
+        "file": "optimized/letterbox-hidden-480-3159044e.webp",
+        "width": 480
+      },
+      {
+        "file": "optimized/letterbox-hidden-960-8c1fc429.webp",
+        "width": 960
+      },
+      {
+        "file": "optimized/letterbox-hidden-1290-c467752a.webp",
+        "width": 1290
+      }
+    ]
+  },
+  "letterbox-home.jpg": {
+    "width": 1290,
+    "height": 2796,
+    "kind": "image",
+    "variants": [
+      {
+        "file": "optimized/letterbox-home-480-574b2d81.webp",
+        "width": 480
+      },
+      {
+        "file": "optimized/letterbox-home-960-ef89cc07.webp",
+        "width": 960
+      },
+      {
+        "file": "optimized/letterbox-home-1290-83069b1e.webp",
+        "width": 1290
+      }
+    ]
+  },
+  "letterbox-icon.png": {
+    "width": 1024,
+    "height": 1024,
+    "kind": "icon",
+    "variants": [
+      {
+        "file": "optimized/letterbox-icon-64-74d723e6.webp",
+        "width": 64
+      },
+      {
+        "file": "optimized/letterbox-icon-128-8d95eb89.webp",
+        "width": 128
+      },
+      {
+        "file": "optimized/letterbox-icon-192-94e7d79e.webp",
+        "width": 192
+      }
+    ]
+  },
+  "llama-collage.png": {
+    "width": 1536,
+    "height": 1024,
+    "kind": "image",
+    "variants": [
+      {
+        "file": "optimized/llama-collage-480-a0b0209f.webp",
+        "width": 480
+      },
+      {
+        "file": "optimized/llama-collage-960-70450c3e.webp",
+        "width": 960
+      },
+      {
+        "file": "optimized/llama-collage-1440-ed239139.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "llama-icon.png": {
+    "width": 1024,
+    "height": 1024,
+    "kind": "icon",
+    "variants": [
+      {
+        "file": "optimized/llama-icon-64-27a95a38.webp",
+        "width": 64
+      },
+      {
+        "file": "optimized/llama-icon-128-59f681e7.webp",
+        "width": 128
+      },
+      {
+        "file": "optimized/llama-icon-192-8e77172b.webp",
+        "width": 192
+      }
+    ]
+  },
+  "optimity-icon.jpg": {
+    "width": 512,
+    "height": 512,
+    "kind": "icon",
+    "variants": [
+      {
+        "file": "optimized/optimity-icon-64-adec48f5.webp",
+        "width": 64
+      },
+      {
+        "file": "optimized/optimity-icon-128-90a85371.webp",
+        "width": 128
+      },
+      {
+        "file": "optimized/optimity-icon-192-32c3049c.webp",
+        "width": 192
+      }
+    ]
+  },
+  "ora-icon.jpg": {
+    "width": 512,
+    "height": 512,
+    "kind": "icon",
+    "variants": [
+      {
+        "file": "optimized/ora-icon-64-5d811cf0.webp",
+        "width": 64
+      },
+      {
+        "file": "optimized/ora-icon-128-fa77696b.webp",
+        "width": 128
+      },
+      {
+        "file": "optimized/ora-icon-192-af7bb441.webp",
+        "width": 192
+      }
+    ]
+  },
+  "poly-gameplay-1.jpg": {
+    "width": 800,
+    "height": 1422,
+    "kind": "image",
+    "variants": [
+      {
+        "file": "optimized/poly-gameplay-1-480-6cc78d9a.webp",
+        "width": 480
+      },
+      {
+        "file": "optimized/poly-gameplay-1-800-223a79b4.webp",
+        "width": 800
+      }
+    ]
+  },
+  "poly-gameplay-2.jpg": {
+    "width": 800,
+    "height": 1422,
+    "kind": "image",
+    "variants": [
+      {
+        "file": "optimized/poly-gameplay-2-480-b014ba7f.webp",
+        "width": 480
+      },
+      {
+        "file": "optimized/poly-gameplay-2-800-24cef1e1.webp",
+        "width": 800
+      }
+    ]
+  },
+  "poly-hero.png": {
+    "width": 600,
+    "height": 900,
+    "kind": "image",
+    "variants": [
+      {
+        "file": "optimized/poly-hero-480-bd6709b0.webp",
+        "width": 480
+      },
+      {
+        "file": "optimized/poly-hero-600-146ec0a3.webp",
+        "width": 600
+      }
+    ]
+  },
+  "poly-icon.png": {
+    "width": 1024,
+    "height": 1024,
+    "kind": "icon",
+    "variants": [
+      {
+        "file": "optimized/poly-icon-64-1b2fef7c.webp",
+        "width": 64
+      },
+      {
+        "file": "optimized/poly-icon-128-20afe0cc.webp",
+        "width": 128
+      },
+      {
+        "file": "optimized/poly-icon-192-69aec4ad.webp",
+        "width": 192
+      }
+    ]
+  },
+  "portrait-pencil-sketch.png": {
+    "width": 1086,
+    "height": 1448,
+    "kind": "portrait",
+    "variants": [
+      {
+        "file": "optimized/portrait-pencil-sketch-256-c02de7b6.webp",
+        "width": 256
+      },
+      {
+        "file": "optimized/portrait-pencil-sketch-384-c10bc927.webp",
+        "width": 384
+      },
+      {
+        "file": "optimized/portrait-pencil-sketch-576-cfe624cd.webp",
+        "width": 576
+      },
+      {
+        "file": "optimized/portrait-pencil-sketch-768-98482158.webp",
+        "width": 768
+      }
+    ]
+  },
+  "rbc-icon.jpg": {
+    "width": 512,
+    "height": 512,
+    "kind": "icon",
+    "variants": [
+      {
+        "file": "optimized/rbc-icon-64-75dfdacc.webp",
+        "width": 64
+      },
+      {
+        "file": "optimized/rbc-icon-128-68063b63.webp",
+        "width": 128
+      },
+      {
+        "file": "optimized/rbc-icon-192-3fdee961.webp",
+        "width": 192
+      }
+    ]
+  },
+  "ridwell-icon.jpg": {
+    "width": 512,
+    "height": 512,
+    "kind": "icon",
+    "variants": [
+      {
+        "file": "optimized/ridwell-icon-64-1f45854b.webp",
+        "width": 64
+      },
+      {
+        "file": "optimized/ridwell-icon-128-b7d883e6.webp",
+        "width": 128
+      },
+      {
+        "file": "optimized/ridwell-icon-192-ed62b2fb.webp",
+        "width": 192
+      }
+    ]
+  },
+  "spirea-icon.jpg": {
+    "width": 1000,
+    "height": 1000,
+    "kind": "icon",
+    "variants": [
+      {
+        "file": "optimized/spirea-icon-64-7bd757cb.webp",
+        "width": 64
+      },
+      {
+        "file": "optimized/spirea-icon-128-2e029ad6.webp",
+        "width": 128
+      },
+      {
+        "file": "optimized/spirea-icon-192-9159fb62.webp",
+        "width": 192
+      }
+    ]
+  },
+  "spirea.jpg": {
+    "width": 1620,
+    "height": 971,
+    "kind": "image",
+    "variants": [
+      {
+        "file": "optimized/spirea-480-11ebc59d.webp",
+        "width": 480
+      },
+      {
+        "file": "optimized/spirea-960-12d23b55.webp",
+        "width": 960
+      },
+      {
+        "file": "optimized/spirea-1440-4d1357f4.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "teleport-icon.jpg": {
+    "width": 512,
+    "height": 512,
+    "kind": "icon",
+    "variants": [
+      {
+        "file": "optimized/teleport-icon-64-5220aa8d.webp",
+        "width": 64
+      },
+      {
+        "file": "optimized/teleport-icon-128-7c99f0b3.webp",
+        "width": 128
+      },
+      {
+        "file": "optimized/teleport-icon-192-238e1d07.webp",
+        "width": 192
+      }
+    ]
+  },
+  "zipline-icon.jpg": {
+    "width": 512,
+    "height": 512,
+    "kind": "icon",
+    "variants": [
+      {
+        "file": "optimized/zipline-icon-64-2f6db28c.webp",
+        "width": 64
+      },
+      {
+        "file": "optimized/zipline-icon-128-562ee98b.webp",
+        "width": 128
+      },
+      {
+        "file": "optimized/zipline-icon-192-28eefa94.webp",
+        "width": 192
+      }
+    ]
+  }
+}
