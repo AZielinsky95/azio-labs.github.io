@@ -48,6 +48,8 @@ The GainIQ contract is shown as “Nov 2025–Nov 2026” as supplied by Alejand
 
 ## Asset provenance
 
+- Resume: `Downloads/Alejandro Zielinsky Resume - Senior Software Engineer.pdf`; the supplied PDF is served with a content-versioned link.
+
 - Portrait: a pencil sketch derived from Alejandro’s supplied smiling portrait, with a shared circle mask on Overview and About Me.
 - Bento imagery: `Projects/bento-app.github.io/public/images/` and app icon from that site.
 - Sticker Llama icon/collage: `Projects/StickerLLamaSite/public/assets/`.
